@@ -2,6 +2,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+//TASK:
+//Implement an algorithm to determine if a string has all unique characters. 
+//What if you cannot use additional data structures?
+
+
 public class StringChecker {
 
 	public static void main(String[] args) {
@@ -9,7 +14,8 @@ public class StringChecker {
 		System.out.println (checkAllUniqueChars2("ramiz"));
 	}
 	
-	public static boolean checkAllUniqueChars1 (String inputString){
+	//Solution with use of Set as an additional data structure
+	public static boolean checkAllUniqueChars1 (String inputString){ 
 		Set <Character> charSet = new HashSet <Character> ();
 		char [] charArray = inputString.toCharArray();
 		
@@ -19,6 +25,7 @@ public class StringChecker {
 		return (charSet.size() == charArray.length);
 	}
 	
+	//Solution without using any additional data structures
 	public static boolean checkAllUniqueChars2 (String inputString){
 		char [] charArray = inputString.toCharArray();
 		for (char c: charArray){
