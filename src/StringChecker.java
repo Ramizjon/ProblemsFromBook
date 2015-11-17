@@ -14,7 +14,8 @@ public class StringChecker {
 		System.out.println (checkAllUniqueChars2("ramiz"));
 	}
 	
-	//Solution with use of Set as an additional data structure
+	//Solution with use of Set as an additional data structure  
+	//based on uniqueness of all Set elements.
 	public static boolean checkAllUniqueChars1 (String inputString){ 
 		Set <Character> charSet = new HashSet <Character> ();
 		char [] charArray = inputString.toCharArray();
