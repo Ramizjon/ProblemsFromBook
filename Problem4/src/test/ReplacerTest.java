@@ -1,9 +1,10 @@
-import static org.junit.Assert.*;
+package test;
+import static org.junit.Assert.assertEquals;
+import main.*;
 
 import org.junit.Test;
 
-
-public class ReplacerTest {
+public class ReplacerTest  {
 
 	@Test
 	public void testReplacer() {
