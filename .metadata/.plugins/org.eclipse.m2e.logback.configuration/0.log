@@ -143,3 +143,7 @@
 2015-11-24 13:40:35,510 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/admin/Documents/git_workspace/ProblemsFromBook/Problem6/src/main/resources
 2015-11-24 13:40:35,511 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-11-24 13:40:35,511 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/admin/Documents/git_workspace/ProblemsFromBook/Problem6/src/test/resources
+2015-11-24 13:54:35,012 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-24 13:54:35,012 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/admin/Documents/git_workspace/ProblemsFromBook/Problem6/src/main/resources
+2015-11-24 13:54:35,013 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-11-24 13:54:35,013 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/admin/Documents/git_workspace/ProblemsFromBook/Problem6/src/test/resources
