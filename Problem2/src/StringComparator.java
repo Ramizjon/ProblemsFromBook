@@ -12,9 +12,6 @@ public class StringComparator {
 		Arrays.sort(secondStringChars);
 		
 		//simply compare sorted Strings for elements equality
-		if (Arrays.equals(firstStringChars, secondStringChars))
-			return true;
-		
-		return false;
+		return Arrays.equals(firstStringChars, secondStringChars);
 	}
 }
