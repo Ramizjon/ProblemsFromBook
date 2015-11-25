@@ -1,7 +1,0 @@
-package com.ramiz;
-
-import junit.framework.TestCase;
-
-public class RotationTest extends TestCase {
-
-}

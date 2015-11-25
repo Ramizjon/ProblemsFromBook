@@ -1,6 +1,0 @@
-INDEX VERSION 1.127+/Users/admin/Documents/git_workspace/ProblemsFromBook/.metadata/.plugins/org.eclipse.jdt.core
-3618984088.index
-3752838966.index
-1103843989.index
-2829645728.index
-2948936633.index
