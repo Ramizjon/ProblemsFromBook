@@ -10,13 +10,13 @@ tmp/
 local.properties
 .settings/
 .loadpath
-.bash_profile
+*.bash_profile
 .recommenders
-.zip
-.class
-.yml
-.gitkeep
-
+*.zip
+**/*.class
+**/*.yml
+**/*.gitkeep
+**/resources
 
 # Eclipse Core
 .project
