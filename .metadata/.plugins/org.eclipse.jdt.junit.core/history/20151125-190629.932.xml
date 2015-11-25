@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="problem1 (1)" project="problem1" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="problem1.CheckerTest" time="0.002">
+    <testcase name="testEmptyString" classname="problem1.CheckerTest" time="0.002"/>
+    <testcase name="testSomeDifferentChars" classname="problem1.CheckerTest" time="0.0"/>
+  </testsuite>
+</testrun>
