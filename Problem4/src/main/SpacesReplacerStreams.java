@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class SpacesReplacerStreams implements Replacer{
 
+	/**
+	 * not implemented yet
+	 */
+	
 	@Override
 	public String replaceSpaces(char[] inputString) {
 		ArrayList <Character> charactersList = new ArrayList<Character>();
