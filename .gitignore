@@ -13,6 +13,7 @@ local.properties
 *.bash_profile
 .recommenders
 *.zip
+**/classes/
 **/*.class
 **/*.yml
 **/*.gitkeep
