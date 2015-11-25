@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CheckerTests" project="problem1" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="CheckerTests" time="0.002">
-    <testcase name="testAllUnique" classname="CheckerTests" time="0.001"/>
-    <testcase name="testEmptyString" classname="CheckerTests" time="0.001"/>
-    <testcase name="testSomeDifferentChars" classname="CheckerTests" time="0.0"/>
-  </testsuite>
-</testrun>
