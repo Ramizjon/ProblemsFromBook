@@ -11,6 +11,12 @@ local.properties
 .settings/
 .loadpath
 .bash_profile
+.recommenders
+.zip
+.class
+.yml
+.gitkeep
+
 
 # Eclipse Core
 .project
