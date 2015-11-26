@@ -14,6 +14,11 @@ public class CustomLinkedList {
 		head = new Node (data);
 	}
 	
+	/**
+	 * Adds a new node with entered value
+	 * @param data - integer value to be added
+	 * @return reference to itself for convenient adding
+	 */
 	public CustomLinkedList add (int data){
 		Node current = this.head;
 		while (current.next != null){
@@ -23,6 +28,10 @@ public class CustomLinkedList {
 		return this;
 	}
 	
+	/**
+	 * Removes node by selected value.
+	 * @param data - integer value used as key to delete node
+	 */
 	public void removeNode (int data){
 		if (head.data == data){
 			this.head = head.next;
@@ -37,6 +46,10 @@ public class CustomLinkedList {
 		}
 	}
 	
+	/**
+	 * Removes node by selected index
+	 * @param index - integer value, index of node to be deleted
+	 */
 	public void removeNodeByIndex (int index){
 		Node current = head;
 		int counter = 0;
@@ -49,6 +62,10 @@ public class CustomLinkedList {
 		}
 	}
 	
+	/**
+	 * Removes duplicates from linked list
+	 * 
+	 */
 	public void removeDuplicates () {
 		Node current = this.head;
 		while (current.next != null){
@@ -63,6 +80,9 @@ public class CustomLinkedList {
 		}
 	}
 	
+	/**
+	 * Prints list contents to stdout
+	 */
 	public void print (){
 		Node current = this.head;
 		while (current.next != null){
@@ -70,6 +90,11 @@ public class CustomLinkedList {
 			System.out.print(current.data + " ");
 		}
 	}
+	
+	
+	/**
+	 * String representation of linked list
+	 */
 	
 	public String toString (){
 		Node current = this.head;
