@@ -10,24 +10,27 @@ public class TestList {
 
 	@Test
 	public void testRemoveDuplicates() {
-		CustomLinkedList list = new CustomLinkedList(50);
-		for (int i = 0; i < 10; i++){
-			list.add(i+1);
-		}
-		list.add(6).add(8).add(10); //adding duplicates
-		list.removeDuplicates();
-		assertEquals("50123457968", list.toString());
+		CustomLinkedList<Integer> list = new CustomLinkedList<Integer>(5);
+		list.add(6).add(10).add(8).add(10).add(10).add(11).add(6).add(34).add(6);
+		list.removeDuplicatesHash();
+		assertEquals("345681011", list.toString());
 	}
 	
 	@Test
-	public void testWithoutDuplicates (){
-		CustomLinkedList list = new CustomLinkedList(50);
-		for (int i = 0; i < 10; i++){
-			list.add(i+1);
-		}
-		list.removeDuplicates();
+	public void testDuplicatesOnly (){
+		CustomLinkedList<Integer> list = new CustomLinkedList<Integer>(1);
+		list.add(1).add(1).add(1).add(1).add(1);
+		list.removeDuplicatesHash();
 		System.out.println(list.toString());
-		assertEquals("50123456789", list.toString());
+		assertEquals("1", list.toString());
+	}
+	
+	@Test
+	public void testChars (){
+		CustomLinkedList<Character> list = new CustomLinkedList<Character>(new Character('t'));
+		list.add('a').add('b').add('c').add('b');
+		list.removeDuplicatesHash();
+		assertEquals("abct", list.toString());
 	}
 
 }

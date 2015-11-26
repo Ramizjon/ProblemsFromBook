@@ -1,17 +1,15 @@
 package problem7;
 
-/**
- * Task: <br>
- * Write code to remove duplicates from an unsorted linked list
- * @author Ramiz
- *
- */
-public class CustomLinkedList {
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
+public class CustomLinkedList <T> {
+	
 	public Node head;
 	
-	public CustomLinkedList (int data){
-		head = new Node (data);
+	public CustomLinkedList (T data){
+		this.head = new Node (data);
 	}
 	
 	/**
@@ -19,12 +17,12 @@ public class CustomLinkedList {
 	 * @param data - integer value to be added
 	 * @return reference to itself for convenient adding
 	 */
-	public CustomLinkedList add (int data){
+	public CustomLinkedList add (T data) {
 		Node current = this.head;
 		while (current.next != null){
 			current = current.next;
 		}
-		current.next = new Node(data);
+		current.next = new Node (data);
 		return this;
 	}
 	
@@ -32,7 +30,7 @@ public class CustomLinkedList {
 	 * Removes node by selected value.
 	 * @param data - integer value used as key to delete node
 	 */
-	public void removeNode (int data){
+	public void removeNode (T data){
 		if (head.data == data){
 			this.head = head.next;
 		}
@@ -46,37 +44,43 @@ public class CustomLinkedList {
 		}
 	}
 	
-	/**
-	 * Removes node by selected index
-	 * @param index - integer value, index of node to be deleted
-	 */
-	public void removeNodeByIndex (int index){
-		Node current = head;
-		int counter = 0;
-		while (current.next != null){
-			if (counter == index){
-				current.next = current.next.next;
-			}
-			current = current.next;
-			counter++;
-		}
-	}
-	
+
 	/**
 	 * Removes duplicates from linked list
-	 * 
+	 * Complexity is O(N^2) as we have nested loops
 	 */
 	public void removeDuplicates () {
 		Node current = this.head;
 		while (current.next != null){
 			Node temp = current;
-			while (temp.next != null){
+			while (temp.next != null && temp.next.next != null){
 				if (current.data == temp.next.data){
-					this.removeNode(current.data);
+					temp.next = temp.next.next;
+					//this.removeNode((T)current.data);
 				}
 				temp = temp.next;
 			}
 			current = current.next;
+		}
+	}
+	
+	
+	/**
+	 * Removes duplicates from linked list
+	 * Complexity in this case will be <br>
+	 * O(2N) now, because we have two loops in a row
+	 */
+	public void removeDuplicatesHash(){
+		Set <Node> nodeSet = new HashSet<Node>();
+		Node current = this.head;
+		while (current.next!=null){
+			nodeSet.add(current);
+			current = current.next;
+		}
+		Iterator <Node>iterator = nodeSet.iterator();
+		this.head = new Node (iterator.next().data);
+		while (iterator.hasNext()){
+			this.add((T)iterator.next().data);
 		}
 	}
 	
@@ -85,6 +89,7 @@ public class CustomLinkedList {
 	 */
 	public void print (){
 		Node current = this.head;
+		System.out.print(current.data + " ");
 		while (current.next != null){
 			current = current.next;
 			System.out.print(current.data + " ");
@@ -99,11 +104,11 @@ public class CustomLinkedList {
 	public String toString (){
 		Node current = this.head;
 		StringBuilder sb = new StringBuilder();
+		sb.append(current.data);
 		while (current.next != null){
-			sb.append(current.data);
 			current = current.next;
+			sb.append(current.data);
 		}
 		return sb.toString();
 	}
-	
 }

@@ -19,7 +19,6 @@ local.properties
 **/*.gitkeep
 **/resources
 **/*.jar
-**/*.properties
 
 # Eclipse Core
 .project
