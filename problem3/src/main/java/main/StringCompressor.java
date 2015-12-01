@@ -1,5 +1,8 @@
 package main;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 
 
@@ -38,4 +41,12 @@ public class StringCompressor {
 		}
 		return (inputString.length()>sb.length())?sb.toString():inputString;
 	}
+	
+	public String compressString1 (String inputString){
+		/*Map<String, Long> counted = inputString.chars().
+        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));*/
+		
+		return null;
+	}
+	
 }
