@@ -1,10 +1,10 @@
 package problem10;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import problem10.CustomLinkedList;
+import customlinkedlist.CustomLinkedList;
 
 public class TestPartition {
 
