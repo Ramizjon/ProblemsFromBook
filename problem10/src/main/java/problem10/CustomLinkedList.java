@@ -17,7 +17,7 @@ public class CustomLinkedList <T extends Comparable<T>> {
 	}
 	
 	/**
-	 * Adds a new node with entered value
+	 * Adds a new node with entered value.
 	 * @param data - integer value to be added
 	 * @return reference to itself for convenient adding
 	 */
@@ -111,9 +111,9 @@ public class CustomLinkedList <T extends Comparable<T>> {
 		listLess.addNode(listGreater.head);
 		this.head = listLess.head;
 	}
-	
+
 	/**
-	 * String representation of linked list
+	 *String representation of linked list
 	 */
 	public String toString (){
 		Node current = this.head;
