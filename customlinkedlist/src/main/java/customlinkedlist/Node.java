@@ -1,4 +1,4 @@
-package problem8;
+package customlinkedlist;
 
 /**
  * Linked list base element
@@ -7,10 +7,18 @@ package problem8;
  */
 public class Node <T> {
 	Node next;
-	T data;
+	 T data;
 	
 	public Node (T data){
 		this.data = data;
+	}
+	
+	public T getData (){
+		return this.data;
+	}
+	
+	public Node getNext (){
+		return this.next;
 	}
 	
 	@Override
