@@ -11,12 +11,7 @@
     <name>Multi Chapter Simple Parent Project</name>
     
     <modules>
-        <module>Problem1</module>
-        <module>Problem2</module>
-        <module>Problem3</module>
-        <module>Problem4</module>
-        <module>Problem5</module>
-        <module>Problem6</module>
+        <module>problem10</module>
     </modules>
     
     <build>
