@@ -12,7 +12,7 @@
   		<scope>compile</scope>
   	</dependency>
   	<dependency>
-  <groupId>junit</groupId>     <!-- NOT org.junit here -->
+  <groupId>junit</groupId>
   <artifactId>junit-dep</artifactId>
   <version>4.8.2</version>
 </dependency>
