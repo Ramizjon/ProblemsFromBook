@@ -12,7 +12,8 @@ public class CustomLinkedList <T extends Comparable<T>> {
 		this.head = new Node (data);
 	}
 	
-	public CustomLinkedList (){
+
+	public CustomLinkedList() {
 		this.head = new Node ();
 	}
 	
