@@ -5,30 +5,39 @@ import customlinkedlist12.Node;
 
 public class PalindromeChecker <T> {
 
-	public  Node reverseLinkedList(Node currentNode)  
-	 {  // For first node, previousNode will be null  
+	/**
+	 * Reverses linked list
+	 * @param currentNode - first Node to be reversed from. Usually it is head.
+	 * @return node - new pointer to 
+	 */
+	public  Node reverseLinkedList(Node currentNode)  {   
 		Node previousNode=null;  
 		Node nextNode;  
-		while(currentNode!=null)  
-		{  
+		while(currentNode!=null)  {  
 		nextNode=currentNode.getNext();
-		// reversing the link 
 		currentNode.setNext(previousNode);  
-		// moving currentNode and previousNode by 1 node  
 		previousNode=currentNode;  
 		currentNode=nextNode;  
 	    }  
 	  return previousNode;  
-	 }  
+	 }
 	
-	public boolean isPalindrome (Node head){
-		CustomLinkedList<T> normalList = new CustomLinkedList<T>(head);
-		CustomLinkedList<T> reversedList = new CustomLinkedList<T>(reverseLinkedList(head));
+	/**
+	 * Checks if an input list is palindrome.
+	 * @param list - list to be checked
+	 * @return true if palindrome, <br>false otherwise
+	 */
+	public boolean isPalindrome (CustomLinkedList<T> list) {
+		CustomLinkedList<T> normalList = new CustomLinkedList<T>((T) list.head.getData());
+		Node runner = list.getHead();
+		while (runner.getNext() != null){
+			runner = runner.getNext();
+			normalList.add((T)runner.getData());
+		}
 		normalList.print();
-		reversedList.print();
+		CustomLinkedList<T> reversedList = new CustomLinkedList<T>(reverseLinkedList(list.getHead()));
 		Node current = normalList.getHead(); 
 		Node currentRev = reversedList.getHead();
-		
 		while (current.getNext() != null){
 			System.out.println(current.getData() + "  " + currentRev.getData());
 			if (current.getData() != currentRev.getData()){
@@ -39,5 +48,4 @@ public class PalindromeChecker <T> {
 		}
 		return true;
 	}
-		
 }
