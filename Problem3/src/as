@@ -1,0 +1,24 @@
+reads data from hdfs specific folder
+ ( parquet file with simple schema  user ID, list <pair<operationID, segment>>) operation I'd might be one of two values ADD or DELETE
+
+Please organize parquet  input files as a hive storage with partition year month day hour
+
+
+
+
+
+
+
+
+
+
+CREATE EXTERNAL TABLE user_operations (
+id int, pair map <boolean, string>)
+PARTITIONED BY (year string, month string, day string, hour string)
+STORED AS PARQUET
+LOCATION '/user/cloudera/mylearn/tables';
+
+
+
+INSERT INTO user_operations PARTITION (year = '2015', month = '12', day = '9', hour = '11') 
+select id, pair from user_operations_temp;
