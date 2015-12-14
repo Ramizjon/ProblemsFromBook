@@ -1,17 +1,23 @@
-package problem13;
+package problem14;
 
 import java.time.chrono.MinguoChronology;
 
+
 public class Stack <T extends Comparable<T>> {
 	StackNode top;
-	StackNodeMin currentMin;
+	int capacity;
+	int size;
 	
-	public Stack (T data){
+	public Stack (T data, int capacity){
 		top = new StackNode<T>(data);
+		this.capacity = capacity;
+		this.size = 0;
 	}
 	
-	public Stack (){
+	public Stack (int capacity){
 		top = new StackNode<T>();
+		this.capacity = capacity; 
+		this.size = 0;
 	}
 	
 	/**
@@ -21,24 +27,15 @@ public class Stack <T extends Comparable<T>> {
 	 * @return itself for convenient pushing
 	 */
 	public Stack push (T data){
-		if (this.currentMin == null){
-			currentMin = new StackNodeMin<T>(data);
-			top = currentMin;
-			return this;
-		}
-		
-		if (currentMin.getData().compareTo(data) == 1){
-			StackNodeMin nextMin = currentMin;
-			currentMin = new StackNodeMin<T>(data);
-			currentMin.setNextMin(nextMin);
-			top = currentMin;
-			return this;
-		}
-		
 		StackNode<T> node = new StackNode<T>(data);
 		node.setNext(top);
 		top = node;
+		this.size++;
 		return this;
+	}
+	
+	public boolean isEmpty(){
+		return this.size==0;
 	}
 	
 	
@@ -52,20 +49,14 @@ public class Stack <T extends Comparable<T>> {
 		if (top == null || top.getData() == null){
 			throw new StackException("Stack is empty");
 		}
-		else if (this.currentMin == this.top){
-			StackNodeMin<T> tempMin = this.currentMin;
-			currentMin = currentMin.getNextMin();
-			top = currentMin;
-			return tempMin.getData();
-		}
 		StackNode<T> temp = top;
 		top = top.getNext();
+		this.size--;
 		return temp.getData();
 	}
 	
-	public T getMin (){
-		return (T) this.currentMin.getData();
+	public int getSize(){
+		return this.size;
 	}
-	
 	
 }

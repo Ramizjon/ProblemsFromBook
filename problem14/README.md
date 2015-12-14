@@ -1,0 +1,3 @@
+# Problem 14
+
+Imagine a stack of plates. If the stack gets too high, it might be topple. Therefore, in real life, we would likelystart a nerw stack when the previous stack exceeds some threshold. Implement a data structure that mimics this. It should be composed of several stacks and should create a new stack once the previous one exceeds capacity. Pop() and Push() functions should return the same values as it would if there were just a single stack.
