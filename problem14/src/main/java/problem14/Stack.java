@@ -1,7 +1,5 @@
 package problem14;
 
-import java.time.chrono.MinguoChronology;
-
 
 public class Stack <T extends Comparable<T>> {
 	StackNode top;
@@ -38,6 +36,9 @@ public class Stack <T extends Comparable<T>> {
 		return this.size==0;
 	}
 	
+	public int getCapacity(){
+		return this.capacity;
+	}
 	
 	/**
 	 * Pops top element from stack.
@@ -52,6 +53,14 @@ public class Stack <T extends Comparable<T>> {
 		StackNode<T> temp = top;
 		top = top.getNext();
 		this.size--;
+		return temp.getData();
+	}
+	
+	public T peek () throws StackException{
+		if (top == null || top.getData() == null){
+			throw new StackException("Stack is empty");
+		}
+		StackNode<T> temp = top;
 		return temp.getData();
 	}
 	
