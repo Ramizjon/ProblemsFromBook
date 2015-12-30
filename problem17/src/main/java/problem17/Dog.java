@@ -7,6 +7,6 @@ public class Dog extends Animal{
      
      @Override
      public String toString(){
-         return "Dog:[data:" + this.data + ",timestamp:" + this.timestamp + "]";
+         return this.data;
      }
 }

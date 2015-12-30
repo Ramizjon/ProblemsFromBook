@@ -47,9 +47,18 @@ public class Queue <T> {
     public void print() {
         Node<T> node = head;
         while (node != null) {
-            System.out.println(node.toString() + ", ");
+            System.out.print(node.getValue() + ",");
             node = node.getNext();
         }
-        System.out.println();
+    }
+    
+    public String printToString() {
+        Node<T> node = head;
+        StringBuilder sb = new StringBuilder();
+        while (node != null) {
+            sb.append(node.getValue() + ",");
+            node = node.getNext();
+        }
+        return sb.toString();
     }
 }

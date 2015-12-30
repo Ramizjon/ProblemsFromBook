@@ -46,10 +46,20 @@ package problem17;
         }
         
         public void print() {
-            System.out.println("dogQ:");
+            System.out.print("dogQueue:");
             dogQ.print();
-            System.out.println("catQ:");
+            System.out.println();
+            System.out.print("catQueue:");
             catQ.print();
+        }
+        
+        public String printToString() {
+        	StringBuilder sb = new StringBuilder();
+        	sb.append("dogQueue:");
+        	sb.append(dogQ.printToString()+"\n");
+        	sb.append("catQueue:");
+        	sb.append(catQ.printToString()+"\n");
+        	return sb.toString();
         }
 
     private static <E> Queue<E> newQueue(E ... elements) {

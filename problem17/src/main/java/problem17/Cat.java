@@ -8,6 +8,6 @@ public class Cat extends Animal
     
     @Override
     public String toString() {
-        return "Cat:[data:" + this.data + ",timestamp:" + this.timestamp + "]";
+    	return this.data;
     }
 }
