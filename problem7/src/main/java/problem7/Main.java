@@ -1,5 +1,7 @@
 package problem7;
 
+import problem7.CustomLinkedList;
+
 public class Main {
 
 	public static void main(String[] args) {
