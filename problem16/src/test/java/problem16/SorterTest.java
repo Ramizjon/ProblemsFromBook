@@ -29,7 +29,6 @@ public class SorterTest {
 				e.printStackTrace();
 			}
 		}
-		
 		assertEquals("53,34,21,10,6,5,4,3,2,1,", sb.toString());
 	}
 
