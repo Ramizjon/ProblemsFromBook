@@ -15,10 +15,9 @@ local.properties
 *.zip
 **/classes/
 **/*.class
-**/*.yml
 **/*.gitkeep
 **/resources
-target/
+**/target
 
 # Eclipse Core
 .project
