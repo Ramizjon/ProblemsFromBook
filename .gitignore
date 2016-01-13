@@ -16,9 +16,7 @@ local.properties
 **/classes/
 **/*.class
 **/*.gitkeep
-**/resources
 **/target
-
 
 # Eclipse Core
 .project

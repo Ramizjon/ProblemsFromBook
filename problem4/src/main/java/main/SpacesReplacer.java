@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+
 /**
  * TASK:
 Write a method to replace all spaces in a string with '%20'. <br>
@@ -35,6 +37,8 @@ public class SpacesReplacer implements Replacer {
 		}
 		return new String (resultString);
 	}
+	
+
 	
 	
 }
