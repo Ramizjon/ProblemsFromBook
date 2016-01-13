@@ -15,10 +15,12 @@ local.properties
 *.zip
 **/classes/
 **/*.class
-**/*.yml
 **/*.gitkeep
 **/resources
+<<<<<<< HEAD
 **/*.jar
+=======
+>>>>>>> origin/solving_problem13
 **/target
 
 # Eclipse Core
