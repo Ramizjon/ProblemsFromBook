@@ -41,7 +41,6 @@ public class Stack <T extends Comparable<T>> {
 	
 	/**
 	 * Pops top element from stack.
-	 * Checks if current min element is top and reassigns it to nextMin if true
 	 * @return popped element
 	 * @throws StackException if stack is empty
 	 */ 
