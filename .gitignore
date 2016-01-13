@@ -17,10 +17,6 @@ local.properties
 **/*.class
 **/*.gitkeep
 **/resources
-<<<<<<< HEAD
-**/*.jar
-=======
->>>>>>> origin/solving_problem13
 **/target
 
 # Eclipse Core
