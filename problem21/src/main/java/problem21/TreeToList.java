@@ -70,18 +70,4 @@ public class TreeToList {
 		return sb.toString();
 	}
 	
-	public static void main (String[] args) throws java.lang.Exception {
-		TreeNode root = new TreeNode(2);
-		root.setLeft(new TreeNode(16));
-		root.setRight(new TreeNode(35));
-		root.getLeft().setLeft(new TreeNode(21));
-		root.getLeft().setRight(new TreeNode(85));
-		root.getRight().setLeft(new TreeNode(44));
-		root.getRight().setRight(new TreeNode(11));
-
-		TreeToList i  = new TreeToList();
-		//i.levelOrder(root);
-		i.levelOrderQueue(root);
-	}
-	
 }
